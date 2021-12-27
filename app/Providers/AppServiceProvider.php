@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\User;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        /**
+         * for change default pagination style to bootsrap
+         */
+        //Paginator::useBootstrap();
+
+
+        /**
+         * feature 'Gate' to prevent not authorize user use a funtion in apps
+         */
+        // Gate::define('admin', function(User $user){
+        //     return $user->isAdmin;
+        // });
     }
 }

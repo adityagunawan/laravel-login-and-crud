@@ -15,6 +15,11 @@ class PostController extends Controller
      */
     public function index()
     {
+        /**
+         * implementation for 'Gate' feature
+         */
+        // $this->authorize('admin');
+
         $posts = Post::latest()->get();
         return view('posts.index', compact('posts'));
     }

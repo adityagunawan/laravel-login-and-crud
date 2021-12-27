@@ -27,4 +27,5 @@ Route::get("/register", [AuthController::class, 'register']);
 Route::post("/register", [AuthController::class, 'storeRegister']);
 
 Route::get("/", [AuthController::class, 'home']);
-Route::resource('post', PostController::class)->middleware('auth');
+// Route::resource('post', PostController::class)->middleware('auth');
+Route::resource('post', PostController::class)->middleware('admin'); //custom midleware

@@ -38,6 +38,11 @@
         @else
         //show something if user not login
         @endauth --}}
+
+        {{-- @can('admin')
+          //show something if user loged is admin, this method use for Gate feature
+        @endcan --}}
+
       </div>
     </div>
   </nav>
